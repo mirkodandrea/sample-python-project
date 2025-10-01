@@ -9,8 +9,8 @@ Clonare il repository e installare le dipendenze:
 
 ```bash
 git clone <repository-url>
-# creo il virtual environment conda, con preinstallato python3 ed uv
-conda create --prefix .venv/ python=3 uv
+# creo il virtual environment conda, con preinstallato python3.13 ed uv
+conda create -c conda-forge --yes --prefix .venv/ python=3.13 uv
 
 # attivo il virtual environment 
 conda activate .venv/
@@ -46,7 +46,7 @@ mkdir my-project
 cd my-project
 
 # creo il virtual environment conda, con preinstallato python3 ed uv
-conda create --prefix .venv/ python=3 uv
+conda create -c conda-forge --yes --prefix .venv/ python=3.13 uv
 
 # attivo il virtual environment 
 conda activate .venv/
@@ -54,6 +54,7 @@ conda activate .venv/
 # inizializzo il progetto
 uv init
 ```
+
 Questa sequenza di comandi creerà una nuova cartella `my-project` con un ambiente virtuale Python.
 Il comando `uv init` inizializza il progetto e crea il file `pyproject.toml`, ed inizializza un repository git se non esiste già. Inoltre crea un file `.gitignore` con le voci comuni per i progetti Python.
 
@@ -70,6 +71,8 @@ Il progetto include una semplice configurazione di debug che trovate in `.vscode
 È possibile inserire breakpoint cliccando a sinistra del numero di riga nei file Python e poi controllare il flusso di esecuzione, ispezionare variabili, ecc.
 
 Vi consiglio di impostare l'inglese come lingua di VSCODE, perchè è più facile trovare soluzioni online in caso di problemi.
+
+Vi consiglio di aggiungere `code` alla variabile d'ambiente PATH, in modo da poter aprire VSCODE da terminale con il comando `code .`. Lo si può fare da VSCODE premendo `Cmd+Shift+P` (Mac) o `Ctrl+Shift+P` (Windows/Linux) e cercando "Shell Command: Install 'code' command in PATH".
 
 ## Modalità Notebook di VSCODE
 
