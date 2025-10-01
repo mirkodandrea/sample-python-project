@@ -54,6 +54,9 @@ conda activate .venv/
 # inizializzo il progetto
 uv init
 ```
+Questa sequenza di comandi creerà una nuova cartella `my-project` con un ambiente virtuale Python.
+Il comando `uv init` inizializza il progetto e crea il file `pyproject.toml`, ed inizializza un repository git se non esiste già. Inoltre crea un file `.gitignore` con le voci comuni per i progetti Python.
+
 
 ## Note su visual studio code
 
