@@ -7,6 +7,7 @@ Include anche un semplice script Python con funzioni di esempio (annotate con ti
 
 Clonare il repository e installare le dipendenze:
 
+Per linux/mac:
 ```bash
 git clone <repository-url>
 # creo il virtual environment conda, con preinstallato python3.13 ed uv
@@ -15,6 +16,18 @@ conda create -c conda-forge --yes --prefix .venv/ python=3.13 uv
 # attivo il virtual environment 
 conda activate .venv/
 
+# inizializzo il progetto
+uv sync
+```
+
+per windows:
+
+```powershell
+git clone <repository-url>
+# creo il virtual environment conda, con preinstallato python3.13 ed uv
+conda create -c conda-forge --yes --prefix .venv\ python=3.13 uv
+# attivo il virtual environment 
+conda activate .venv\
 # inizializzo il progetto
 uv sync
 ```
@@ -41,6 +54,7 @@ uv add --dev black
 
 ## come creare un nuovo progetto da zero
 
+linux/mac:
 ```bash
 mkdir my-project
 cd my-project
@@ -51,6 +65,19 @@ conda create -c conda-forge --yes --prefix .venv/ python=3.13 uv
 # attivo il virtual environment 
 conda activate .venv/
 
+# inizializzo il progetto
+uv init
+```
+
+windows:
+
+```powershell
+mkdir my-project
+cd my-project
+# creo il virtual environment conda, con preinstallato python3 ed uv
+conda create -c conda-forge --yes --prefix .venv\ python=3.13 uv
+# attivo il virtual environment 
+conda activate .venv\
 # inizializzo il progetto
 uv init
 ```
