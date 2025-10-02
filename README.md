@@ -1,13 +1,16 @@
 # Moderno progetto python con uv
 
-Questo è un esempio di progetto Python moderno che utilizza `pyproject.toml` per la gestione delle dipendenze e la configurazione del progetto.
+Questo è un esempio di progetto Python moderno che utilizza `uv` e `pyproject.toml` per la gestione delle dipendenze e la configurazione del progetto.
 Include anche un semplice script Python con funzioni di esempio (annotate con tipi), docstrings in stile numpydoc, ed un esempio di uso di librerie esterne come `numpy` e `matplotlib`.
+Gli esempi di comandi shell usano `conda` per creare un ambiente virtuale. Si può scaricare ed installare `conda` da [qui](https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions).
+In alternativa si possono usare `venv` o `virtualenv` per creare l'ambiente virtuale, ma in questo caso bisogna installare manualmente Python 3.13+ e `uv` nel sistema.
 
 ## Come eseguire
 
 Clonare il repository e installare le dipendenze:
 
-Per linux/mac:
+### linux/mac
+
 ```bash
 git clone <repository-url>
 # creo il virtual environment conda, con preinstallato python3.13 ed uv
@@ -20,7 +23,7 @@ conda activate .venv/
 uv sync
 ```
 
-per windows:
+### windows
 
 ```powershell
 git clone <repository-url>
@@ -54,7 +57,8 @@ uv add --dev black
 
 ## come creare un nuovo progetto da zero
 
-linux/mac:
+### linux/mac
+
 ```bash
 mkdir my-project
 cd my-project
@@ -69,7 +73,7 @@ conda activate .venv/
 uv init
 ```
 
-windows:
+### windows
 
 ```powershell
 mkdir my-project
